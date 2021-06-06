@@ -379,12 +379,11 @@ function GanarPuntos() {
 
 function GameOver() {
     Estrellarse();
-    suelo.style.animationPlayState = "paused";
     gameOver.style.display = "block";
 }
 
 function DetectarColision() {
-    for (let i = 0; i < obstaculos.length; i++) {
+    for (var i = 0; i < obstaculos.length; i++) {
         if(obstaculos[i].posX > dinoPosX + dino.clientWidth) {
             //EVADE
             break; //al estar en orden, no puede chocar con más
